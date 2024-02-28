@@ -1,12 +1,14 @@
-import { ModeToggle } from "@/components/buttons/ModeToggle";
-import { ProfileForm } from "@/components/forms/ProfileForm";
+import { NavigationMenuDemo } from "@/components/NavBar/NavigationMenuDemo";
+import { Profile } from "@/components/Profile/Profile";
+import { SkillsSeacrh } from "@/components/SkillsSearch/SkillsSearch";
 
 export default function Home() {
   return (
     <>
-      <div>
-        <div className="flex justify-end m-4">
-          <ModeToggle />
+      <div className="flex justify-center pt-4">
+        <div>
+          <NavigationMenuDemo />
+          <Profile />
         </div>
       </div>
     </>
