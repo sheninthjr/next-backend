@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   username: z.string().min(5, {
@@ -25,6 +26,7 @@ const formSchema = z.object({
 });
 
 export function ProfileForm() {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -33,7 +35,9 @@ export function ProfileForm() {
     },
   });
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    if (values.username === "sheninthjr" && values.password === "secret") {
+      router.push("/");
+    }
   }
   return (
     <Form {...form}>

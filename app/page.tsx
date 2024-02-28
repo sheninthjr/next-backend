@@ -8,11 +8,6 @@ export default function Home() {
         <div className="flex justify-end m-4">
           <ModeToggle />
         </div>
-        <div className="h-screen flex justify-center items-center">
-          <div className="border-white">
-            <ProfileForm />
-          </div>
-        </div>
       </div>
     </>
   );
