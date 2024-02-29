@@ -35,7 +35,7 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: "Internship",
     href: "",
-    description: "Full Stack development at Marcello Tech",
+    description: "Full Stack Development at Marcello Tech",
   },
 ];
 
@@ -54,7 +54,7 @@ export function NavigationMenuDemo() {
                     href="/"
                   >
                     <Image
-                      src="/logo.png"
+                      src="/sheninthjr.png"
                       alt="logo"
                       width="100"
                       height="100"
@@ -64,8 +64,8 @@ export function NavigationMenuDemo() {
                       Sheninth Jr
                     </div>
                     <p className="text-sm leading-tight self-center text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
+                      I make full-stack products that solves the real world
+                      problems.
                     </p>
                   </a>
                 </NavigationMenuLink>
@@ -93,7 +93,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Resume</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] font-mono md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
