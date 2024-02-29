@@ -167,7 +167,7 @@ export function Profile() {
                 </div>
               </div>
               <Input
-                placeholder="Search by topics..."
+                placeholder="Search by skills..."
                 onChange={handleSearchChange}
                 className="border-slate-700"
               />
