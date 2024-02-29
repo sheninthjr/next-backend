@@ -14,42 +14,28 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { ModeToggle } from "../buttons/ModeToggle";
+import Image from "next/image";
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    title: "10th Cut-Off (84%)",
+    href: "",
+    description: "Hebron Matriculation and Higher Secondary School",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
+    title: "12th Cut-Off (88.5%)",
+    href: "",
+    description: "Hebron Matriculation and Higher Secondary School",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    title: "UG CGPA (8.59)",
+    href: "",
+    description: "Velammal Institute of Technology",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    title: "Internship",
+    href: "",
+    description: "Full Stack development at Marcello Tech",
   },
 ];
 
@@ -67,24 +53,39 @@ export function NavigationMenuDemo() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <Image
+                      src="/logo.png"
+                      alt="logo"
+                      width="100"
+                      height="100"
+                      className="flex justify-center self-center"
+                    />
+                    <div className="mb-2 mt-4 text-lg font-medium self-center">
                       Sheninth Jr
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
+                    <p className="text-sm leading-tight self-center text-muted-foreground">
                       Beautifully designed components built with Radix UI and
                       Tailwind CSS.
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
+              <ListItem href="https://github.com/sheninthjr" title="Github">
+                Make your open source contribution to my github.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
+              <ListItem
+                href="https://linkedin.com/in/sheninthjr"
+                title="LinkedIn"
+              >
+                Explore my professional journey and discover impactful posts on
+                my LinkedIn.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem
+                href="https://twitter.com/sheninth_jr23"
+                title="Twitter"
+              >
+                Stay updated on the latest developments and announcements
+                regarding my projects by following me on Twitter
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -106,7 +107,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="mailto:sheninthjr23@gmail.com" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Contact
             </NavigationMenuLink>
@@ -133,7 +134,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
+          <div className="text-lg font-bold leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
