@@ -149,7 +149,7 @@ export function Profile() {
             <Command className="rounded-lg gap-1">
               <div className="font-mono">
                 <span className="text-xl font-bold">
-                  Hi, I'm
+                  Hi, I&apos;m
                   <span
                     className="font-extrabold text-xl"
                     style={{ color: "#049bed" }}
@@ -159,10 +159,10 @@ export function Profile() {
                   </span>
                 </span>
                 <div>
-                  I've worked on over ten projects and am proficient in
-                  front-end, back-end, and cloud technologies. Together, let's
-                  create something amazing! My fervour for creativity and
-                  commitment to quality guarantee that we will consistently
+                  I&apos;ve worked on over ten projects and am proficient in
+                  front-end, back-end, and cloud technologies. Together,
+                  let&apos;s create something amazing! My fervour for creativity
+                  and commitment to quality guarantee that we will consistently
                   surpass expectations.
                 </div>
               </div>
@@ -177,8 +177,8 @@ export function Profile() {
                 )}
                 <div className="border-2 space-y-1">
                   {filteredItems.map((item, index) => (
-                    <div className="border-2">
-                      <CommandItem key={index}>
+                    <div key={index} className="border-2">
+                      <CommandItem>
                         <a href={item.link}>
                           <span className="self-start text-lg font-bold">
                             {item.title}
@@ -218,9 +218,9 @@ export function Profile() {
           <div className="border-4 pr-4 pl-4 pb-4">
             <div className="font-bold text-2xl pt-2">Technical Skills</div>
             <div className="text-lg pt-2 font-mono">
-              Throughout my journey, I've been passionate about learning and
-              exploring various technologies on my own. Here are some of the
-              skills I've developed through self-learning:
+              Throughout my journey, I&apos;ve been passionate about learning
+              and exploring various technologies on my own. Here are some of the
+              skills I&apos;ve developed through self-learning:
             </div>
             <Command className="rounded-lg gap-1">
               <div className="font-mono">
